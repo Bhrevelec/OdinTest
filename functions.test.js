@@ -1,4 +1,4 @@
-const { capitalize, reverseString, calculator, caesarify } = require('./functions')
+const { capitalize, reverseString, calculator, caesarify, analyzeArray } = require('./functions')
 
 
 test('capitalize the first letter of boris', () => {
@@ -35,4 +35,13 @@ test('check whether HeLLo becomes KhOOr', () => {
 
 test('check whether Hello, World! returns Khoor, Zruog!', () => {
     expect(caesarify('Hello, World!',3)).toBe('Khoor, Zruog!')
+})
+
+test('check whether array [1,8,3,4,2,6] returns the correct values', () => {
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6,
+        });
 })

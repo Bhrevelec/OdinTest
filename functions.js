@@ -49,4 +49,13 @@ const caesarify = (str, shiftFactor) => {
     return result
 }
 
-module.exports = { capitalize, reverseString, calculator, caesarify}
+const analyzeArray = (array) => {
+    const average = array.reduce((total,value)=>total+value)/array.length;
+    const min = Math.min(...array);
+    const max = Math.max(...array);
+    const length = array.length;
+    const object = {average,min,max,length};
+    return object
+}
+
+module.exports = { capitalize, reverseString, calculator, caesarify, analyzeArray}
